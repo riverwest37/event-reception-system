@@ -1,0 +1,6 @@
+# 5分ごとに受付処理を実行
+*/5 * * * * /home/pi/gmail_sorter/venv/bin/python /home/pi/gmail_sorter/import_online_to_excel.py >> /home/pi/gmail_sorter/gmail_sorter.log 2>&1
+
+
+# 毎日17時にDaily Reportメールを送信
+0 17 * * * /home/pi/gmail_sorter/venv/bin/python /home/pi/gmail_sorter/daily_report_mail.py >> /home/pi/gmail_sorter/daily_report_mail.log 2>&1
